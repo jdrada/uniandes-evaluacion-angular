@@ -1,0 +1,38 @@
+<div class="container mt-4">
+  <h1 class="indie-flower-font">El Aroma Magico</h1>
+  <img
+    alt="cafe"
+    class="w-100 shadow-custom mb-4"
+    src="https://s3-alpha-sig.figma.com/img/959c/ef87/da4c54ca7d71f42d7db8b76e6d8664d2?Expires=1700438400&Signature=W4tWFeShHra~9qbfp854vQdxph9MYHcaeMEuE8sQ7mXex~IQ1fLggRW5OqSZprsGCQUX7dzHhKBCOA35idf2V~hnix6DSKM1HqZn~NG2wvX~X2U8PDraVQ1nXxcYUquKwQvLZCdoObJHtKoHHaWy01Yzxe~PnBvTwlT4w7lSpjA19gX7AFFj2nPQ3Bw1AGbf9b0YIy9jse-XYIW81BvIBahShj0nrd8zLSKSjXUHtZ4E7lYcQBrnzs5Jb004gOF-vfyeBFmR-Sxo43bQgDP5F3kOJ8WKE4S7at7WnAiuhCBDRWRCwh2C6J-2l3r1x7Z-hdR7qoOkkwr0FLerp9hTrw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4"
+  />
+  <table class="table">
+    <thead class="thead-dark thead-dark-figma">
+      <tr class="thead-dark-figma">
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col">Región</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cafe of cafes; let i = index">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>{{ cafe.nombre }}</td>
+        <td>{{ cafe.tipo }}</td>
+        <td>{{ cafe.region }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="totals mt-3">
+    <p>Total café de origen: {{ totalOrigen }}</p>
+    <p>Total café blend: {{ totalBlend }}</p>
+  </div>
+</div>
+<footer class="footer mt-5 py-3 bg-light">
+  <div class="container text-center">
+    <span class="text-muted"
+      >Contact us: +57 3102105253 - info@elaromamagico.com -
+      @elaromamagico</span
+    >
+  </div>
+</footer>
